@@ -2,12 +2,9 @@ import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 
 export default function ItemDetailContainer() {
-    // const datos = [
-    //     {id:1, precio:'138000', descripcion:'Nootebook'},
-    //     {id:2, precio:'17000', descripcion:'Zapatillas Nike'},
-    //     {id:3, precio:'50000', descripcion:'BMX'}
-    // ]
+    // Los hooks son funciones, permiten usar el estado sin necesidad de usar clases
 
+    // Declara una nueva variable de estado, la cual llamaremos “equipo”
     const [equipo, setEquipo] = useState([])
 
     useEffect( () => {
