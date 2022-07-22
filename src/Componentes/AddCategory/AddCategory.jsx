@@ -14,7 +14,7 @@ export const AddCategory = ({ setcategories }) => {
     const onSubmit = (event) => {
         event.preventDefault();
         // console.log(inputValue);
-        if(inputValue.trim().length <= 1) return; // Si el inputValue trim='Elimina espacios'
+        if(inputValue.trim().length <= 1) return; // trim='Elimina espacios'
         
         setcategories(categories => [inputValue, ...categories] );
 
