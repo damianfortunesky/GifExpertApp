@@ -2,9 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 
 
-export const AddCategory = ({ setcategories }) => {
+export const AddCategory = ({ onNewCategory }) => {
 
-    const [inputValue, setinputValue] = useState(['One Punch'])
+    const [inputValue, setinputValue] = useState([''])
 
     const onInputChange = ({target}) => {
         setinputValue(target.value);
@@ -16,7 +16,11 @@ export const AddCategory = ({ setcategories }) => {
         // console.log(inputValue);
         if(inputValue.trim().length <= 1) return; // trim='Elimina espacios'
         
-        setcategories(categories => [inputValue, ...categories] );
+        //setcategories(categories => [inputValue, ...categories] );
+
+        onNewCategory( inputValue.trim() );
+        
+        setinputValue('');
 
     }
 
